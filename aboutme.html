@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我 | 態著 TAI-ZE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom earthy olive palette based on image */
+        :root {
+            --header-bg: #4c5443;
+            --nav-bg: #3c4235;
+            --main-bg: #e5e7df;
+            --accent-green: #5c6652;
+            --text-dark: #2c3027;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f5f1;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+        blockquote {
+            border-left: 4px solid #5c6652;
+            background-color: rgba(92, 102, 82, 0.08);
+            font-style: italic;
+        }
+        ruby rt {
+            font-size: 0.65em;
+            color: #5c6652;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- 導覽列 (Navigation Bar) -->
+    <nav class="bg-[#3c4235] text-white px-4 py-3 shadow-md sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-6 font-medium text-sm md:text-base">
+                <a href="index.html" class="hover:text-amber-200 transition">≡ 首頁</a>
+                <a href="aboutme.html" class="text-amber-300 font-bold border-b-2 border-amber-300 pb-0.5">ⓘ 關於我</a>
+                <a href="#portfolio" class="hover:text-amber-200 transition">🖼️️ 作品集</a>
+                <a href="#forum" class="hover:text-amber-200 transition">💬 論壇</a>
+                <a href="#shop" class="hover:text-amber-200 transition">🛒 商店</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 頁首 (Header) -->
+    <header class="bg-[#4c5443] text-white py-10 px-6 shadow-inner">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-wider mb-2 text-amber-100">態著 TAI-ZE</h1>
+            <p class="text-lg md:text-xl text-stone-200 font-light tracking-widest">穿上態度，定義你的視界。</p>
+        </div>
+    </header>
+
+    <!-- 主要內容 (Main Content) -->
+    <main class="flex-grow max-w-5xl w-full mx-auto my-6 px-4 md:px-6">
+        <div class="bg-[#e5e7df] p-6 md:p-10 rounded-xl shadow-lg border border-stone-300">
+            
+            <!-- 目錄與頁內超連結（書籤） (2-3) -->
+            <section class="bg-white/70 backdrop-blur p-5 rounded-lg border border-stone-300 mb-8">
+                <h2 class="text-xl font-bold text-[#3c4235] mb-3 flex items-center gap-2">
+                    📌 快速導覽目錄
+                </h2>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-sm font-medium">
+                    <li><a href="#sec-intro" class="text-[#4c5443] hover:underline hover:text-emerald-800">1. 個人簡介與主題</a></li>
+                    <li><a href="#sec-brand" class="text-[#4c5443] hover:underline hover:text-emerald-800">2. 品牌理念與態度</a></li>
+                    <li><a href="#sec-skills" class="text-[#4c5443] hover:underline hover:text-emerald-800">3. 核心專業技能 (項目符號)</a></li>
+                    <li><a href="#sec-history" class="text-[#4c5443] hover:underline hover:text-emerald-800">4. 發展歷程 (項目編號)</a></li>
+                    <li><a href="#sec-quote" class="text-[#4c5443] hover:underline hover:text-emerald-800">5. 經典引述</a></li>
+                    <li><a href="#sec-formatting" class="text-[#4c5443] hover:underline hover:text-emerald-800">6. 文字格式展示</a></li>
+                </ul>
+            </section>
+
+            <hr class="border-t-2 border-stone-400 my-8"> <!-- 水平線 (2-7) -->
+
+            <!-- 標題一：個人簡介 (h2) -->
+            <section id="sec-intro" class="mb-10 scroll-mt-20">
+                <h2 class="text-3xl font-bold text-[#2c3027] mb-4 pb-2 border-b-2 border-[#5c6652]">
+                    1. 個人簡介與網站主題
+                </h2>
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <img src="img/IMG_8720.JPG" 
+                         alt="楊家欣照片" 
+                         class="rounded-lg shadow-md border-2 border-stone-400 w-44 object-cover"
+                         onerror="this.src='https://placehold.co/180x220/4c5443/ffffff?text=TAI-ZE';">
+                    
+                    <div class="space-y-4 text-stone-800 leading-relaxed">
+                        <!-- 註音標示與段落 (2-4, 2-8) -->
+                        <p class="text-lg">
+                            你好！我是 <strong><ruby>楊<rt>ㄧㄤˊ</rt>家<rt>ㄐㄧㄚ</rt>欣<rt>ㄒㄧㄣ</rt></ruby></strong>。目前就讀於南臺科技大學電子商務系四年級。
+                        </p>
+                        <p>
+                            我致力於整合電子商務、網頁設計與品牌風格行銷。對我來說，建立這個網站不單只是為了展示作業或履歷，更是為了實踐我對數位品牌與使用者體驗的深刻理解。
+                        </p>
+                        <p>
+                            在這個資訊爆炸的時代，我們透過這個網站平台「態著 TAI-ZE」，希望能夠帶給讀者不一樣的視覺衝擊與風格體驗。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-t border-stone-300 my-8"> <!-- 水平線 (2-7) -->
+
+            <!-- 標題二：品牌理念 (h3) -->
+            <section id="sec-brand" class="mb-10 scroll-mt-20">
+                <h3 class="text-2xl font-semibold text-[#3c4235] mb-3">
+                    2. 態著 TAI-ZE 品牌故事
+                </h3>
+                <p class="mb-4 leading-relaxed">
+                    <u><b>「態著 TAI-ZE」的誕生源自於對「個人風格」與「生活態度」的堅持。我們相信穿搭與網頁設計一樣，都不僅僅是外表的堆疊，而是一種內在理念的具體呈現。</u></b>
+                </p>
+                <p class="leading-relaxed">
+                    透過電子商務的現代技術，我們希望串聯作品展演、潮流討論區與線上選品商店，打造一個專屬於新世代的質感風格社群。
+                </p>
+            </section>
+
+            <hr class="border-t border-stone-300 my-8"> <!-- 水平線 (2-7) -->
+
+            <!-- 標題三：項目符號 (2-5) -->
+            <section id="sec-skills" class="mb-10 scroll-mt-20">
+                <h3 class="text-2xl font-semibold text-[#3c4235] mb-3">
+                    3. 核心專業技能 
+                </h3>
+                <p class="mb-3">在求學與專案實務中，我累積了以下領域的實作能力：</p>
+                <ul class="list-disc list-inside space-y-2 bg-white/50 p-4 rounded-md border border-stone-300">
+                    <li class="font-medium text-stone-800"><strong>電子商務營運：</strong> 品牌定位策略、選品分析、文案撰寫</li>
+                    <li class="font-medium text-stone-800"><strong>網頁前端開發：</strong> HTML5 / CSS3 語法、Tailwind 框架應用、響應式排版 (RWD)</li>
+                    <li class="font-medium text-stone-800"><strong>UI/UX 介面設計：</strong> 網站動線規劃、使用者流程最佳化</li>
+                    <li class="font-medium text-stone-800"><strong>數位內容創作：</strong> 社群視覺設計、品牌故事企劃</li>
+                </ul>
+            </section>
+
+            <hr class="border-t border-stone-300 my-8"> <!-- 水平線 (2-7) -->
+
+            <!-- 標題四：項目編號 (2-5) -->
+            <section id="sec-history" class="mb-10 scroll-mt-20">
+                <h4 class="text-xl font-semibold text-[#3c4235] mb-3">
+                    4. 專案與成長歷程 
+                </h4>
+                <p class="mb-3"><s>以下是我近年來的學習與專案推動步驟：</s></p>
+                <ol class="list-decimal list-inside space-y-2 bg-white/50 p-4 rounded-md border border-stone-300">
+                    <li><strong>階段一：基礎奠定</strong> — 深入學習電子商務理論與前端網頁基本結構與設計。</li>
+                    <li><strong>階段二：品牌發想</strong> — 規劃「態著 TAI-ZE」品牌核心精神，確立「穿上態度」的主軸。</li>
+                    <li><strong>階段三：平台建置</strong> — 整合導覽列、作品集與討論區，優化使用者瀏覽順暢度。</li>
+                    <li><strong>階段四：持續疊代</strong> — 根據使用者反饋修訂網頁體驗，並拓展線上商店模組。</li>
+                </ol>
+            </section>
+
+            <hr class="border-t border-stone-300 my-8"> <!-- 水平線 (2-7) -->
+
+            <!-- 引述區塊 blockquote (2-6) -->
+            <section id="sec-quote" class="mb-10 scroll-mt-20">
+                <h3 class="text-2xl font-semibold text-[#3c4235] mb-3">
+                    5. 座右銘與經典引述
+                </h3>
+                <p class="mb-3">這是我在從事品牌設計與電商規劃時始終堅守的精神：</p>
+                <blockquote class="p-5 rounded-lg shadow-sm text-lg font-serif text-stone-800 leading-relaxed my-4">
+                <mark class="bg-yellow-200 px-1 rounded"><i>「風格不只是你穿了什麼，而是你如何透過選擇，向世界宣告你的態度。穿上態度，定義你的視界。」</i>
+                </blockquote>
+            </section>
+
+            <hr class="border-t border-stone-300 my-8"> <!-- 水平線 (2-7) -->
+
+            <!-- 文字樣式展示 (2-8) -->
+            <section id="sec-formatting" class="mb-6 scroll-mt-20">
+                <h3 class="text-2xl font-semibold text-[#3c4235] mb-3">
+                   
+                </div>
+            </section>
+
+        </div>

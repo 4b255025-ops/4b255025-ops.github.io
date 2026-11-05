@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消費者偏好與風格調查問卷 | 態著 TAI-ZE</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- W3.CSS 框架 -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        :root {
+            --header-bg: #4c5443;
+            --nav-bg: #3c4235;
+            --main-bg: #e5e7df;
+            --accent-green: #5c6652;
+            --text-dark: #2c3027;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f5f1;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+        fieldset {
+            border: 2px solid #5c6652 !important;
+            border-radius: 12px;
+            background-color: #ffffff;
+        }
+        legend {
+            background-color: #4c5443;
+            color: #ffffff;
+            padding: 6px 16px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- 導覽列 (Navigation Bar) -->
+    <nav class="bg-[#3c4235] text-white px-4 py-3 shadow-md sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-6 font-medium text-sm md:text-base">
+                <a href="index.html" class="hover:text-amber-200 transition">≡ 首頁</a>
+                <a href="aboutme.html" class="hover:text-amber-200 transition">ⓘ 關於我</a>
+                <a href="album.html" target="_blank" class="hover:text-amber-200 transition">🖼 作品集</a>
+				<a href="questionnaire.html" class="text-amber-300 font-bold border-b-2 border-amber-300 pb-0.5">📋 問卷表單</a>
+                <a href="#forum" class="hover:text-amber-200 transition">💬 論壇</a>
+                <a href="#shop" class="hover:text-amber-200 transition">🛒 商店</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- 頁首 (Header) -->
+    <header class="bg-[#4c5443] text-white py-10 px-6 shadow-inner">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-wider mb-2 text-amber-100">態著 TAI-ZE</h1>
+            <p class="text-lg md:text-xl text-stone-200 font-light tracking-widest">穿上態度，定義你的視界。</p>
+        </div>
+    </header>
+
+    <!-- 主要內容區塊 (Main Content) -->
+    <main class="flex-grow max-w-5xl w-full mx-auto my-6 px-4 md:px-6">
+        <div class="bg-[#e5e7df] p-6 md:p-10 rounded-xl shadow-lg border border-stone-300">
+
+            <h2 class="text-3xl font-bold text-[#2c3027] mb-2 border-b-2 border-[#5c6652] pb-2">
+                📋 「態著 TAI-ZE」消費者偏好與風格調查問卷
+            </h2>
+            <p class="text-stone-700 mb-6 leading-relaxed">
+                感謝您蒞臨「態著 TAI-ZE」。為了協助我們打造更貼近您個人風格的選品與網頁瀏覽體驗，請花費 2~3 分鐘填寫以下問卷。您的寶貴意見將是我們持續成長的動力！
+            </p>
+
+            <!-- 使用 fieldset 將所有表單欄位框起來 -->
+            <form action="#" method="post" class="w3-container">
+                <fieldset class="p-6 md:p-8 space-y-8 shadow-sm">
+                    <legend class="text-lg shadow">態著 TAI-ZE 品牌意見調查表</legend>
+
+                    <!-- Q1. 是非題：使用 checkbox -->
+                    <div class="w3-panel w3-leftbar w3-border-green bg-stone-50 p-4 rounded">
+                        <h3 class="text-lg font-bold text-[#3c4235] mb-1">
+                            Q1. 會員身份確認 <span class="text-sm font-normal text-stone-500">(是非題 - Checkbox)</span>
+                        </h3>
+                        <p class="text-sm text-stone-600 mb-3">請確認您目前是否已經是「態著 TAI-ZE」的註冊會員。</p>
+                        <label class="w3-validate flex items-center gap-2 cursor-pointer text-stone-800 font-medium">
+                            <input class="w3-check" type="checkbox" name="is_member" value="yes">
+                            是的，我已經是「態著 TAI-ZE」的官方會員。
+                        </label>
+                    </div>
+
+                    <!-- Q2. 單選題：使用 radio -->
+                    <div class="w3-panel w3-leftbar w3-border-green bg-stone-50 p-4 rounded">
+                        <h3 class="text-lg font-bold text-[#3c4235] mb-1">
+                            Q2. 平日穿搭風格選擇 <span class="text-sm font-normal text-stone-500">(單選題 - Radio)</span>
+                        </h3>
+                        <p class="text-sm text-stone-600 mb-3">請選擇您日常最常穿著或最喜愛的服裝風格（單選）：</p>
+                        <div class="space-y-2 text-stone-800">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input class="w3-radio" type="radio" name="style_preference" value="city_boy" checked>
+                                日系極簡 / City Boy 寬鬆風格
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input class="w3-radio" type="radio" name="style_preference" value="streetwear">
+                                美式街頭 / 工裝潮牌風格
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input class="w3-radio" type="radio" name="style_preference" value="vintage">
+                                復古古著 / 經典大地色系
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input class="w3-radio" type="radio" name="style_preference" value="smart_casual">
+                                正裝混搭 / Smart Casual 雅痞風
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q3. 單選題：使用 select -->
+                    <div class="w3-panel w3-leftbar w3-border-green bg-stone-50 p-4 rounded">
+                        <h3 class="text-lg font-bold text-[#3c4235] mb-1">
+                            Q3. 獲知網站的主要管道 <span class="text-sm font-normal text-stone-500">(單選題 - Dropdown Select)</span>
+                        </h3>
+                        <p class="text-sm text-stone-600 mb-3">請問您最初是透過什麼管道得知「態著 TAI-ZE」網站的？</p>
+                        <select class="w3-select w3-border w3-round bg-white max-w-md" name="source_channel">
+                            <option value="" disabled selected>-- 請選擇獲知管道 --</option>
+                            <option value="ig_threads">Instagram / Threads 社群平台</option>
+                            <option value="friend_recommend">朋友或同學親友推薦</option>
+                            <option value="search_engine">Google 等搜尋引擎查詢</option>
+                            <option value="campus_event">南臺科大校園專案或展覽</option>
+                            <option value="other">其他管道</option>
+                        </select>
+                    </div>
+
+                    <!-- Q4. 複選題：使用 checkbox -->
+                    <div class="w3-panel w3-leftbar w3-border-green bg-stone-50 p-4 rounded">
+                        <h3 class="text-lg font-bold text-[#3c4235] mb-1">
+                            Q4. 最感興趣的商品與主題內容 <span class="text-sm font-normal text-stone-500">(複選題 - Checkbox)</span>
+                        </h3>
+                        <p class="text-sm text-stone-600 mb-3">請問您在「態著 TAI-ZE」網站中最希望瀏覽或購買的項目為何？（可複選）</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-stone-800">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input class="w3-check" type="checkbox" name="interests" value="apparel">
+                                上衣與質感外衣系列
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input class="w3-check" type="checkbox" name="interests" value="accessories">
+                                飾品、帽子與隨身配件
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input class="w3-check" type="checkbox" name="interests" value="lookbook">
+                                態度穿搭 Lookbook 誌
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input class="w3-check" type="checkbox" name="interests" value="forum_discussion">
+                                潮流社群論壇主題交流
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Q5. 複選題：使用 select multiple -->
+                    <div class="w3-panel w3-leftbar w3-border-green bg-stone-50 p-4 rounded">
+                        <h3 class="text-lg font-bold text-[#3c4235] mb-1">
+                            Q5. 希望網站舉辦的線上活動 <span class="text-sm font-normal text-stone-500">(複選題 - Multiple Select)</span>
+                        </h3>
+                        <p class="text-sm text-stone-600 mb-3">請問您未來希望參加哪些線上互動活動？（請按住 Ctrl 或 Cmd 鍵進行多選）：</p>
+                        <select class="w3-select w3-border w3-round bg-white max-w-md h-32" name="future_events" multiple>
+                            <option value="outfit_voting">每週 OOTD 穿搭票選抽獎</option>
+                            <option value="designer_sharing">品牌創辦人 / 設計師線上直播分享</option>
+                            <option value="limited_drop">限量嚴選單品限時預購</option>
+                            <option value="member_discount">會員專屬折價券快閃發放</option>
+                        </select>
+                    </div>
+
+                    <!-- Q6. 填充題：一般文字輸入 (text) -->
+                    <div class="w3-panel w3-leftbar w3-border-green bg-stone-50 p-4 rounded">
+                        <h3 class="text-lg font-bold text-[#3c4235] mb-1">
+                            Q6. 常購服飾品牌 <span class="text-sm font-normal text-stone-500">(填充題 - Text)</span>
+                        </h3>
+                        <p class="text-sm text-stone-600 mb-3">請問您平日最常購買或關注的 1~2 個服飾品牌名稱為何？</p>
+                        <input class="w3-input w3-border w3-round bg-white max-w-md" type="text" name="favorite_brand" placeholder="例如：UNIQLO, Beams, Studio Doe..." required>
+                    </div>
+
+                    <!-- Q7. 填充題：限定數字 (number) -->
+                    <div class="w3-panel w3-leftbar w3-border-green bg-stone-50 p-4 rounded">
+                        <h3 class="text-lg font-bold text-[#3c4235] mb-1">
+                            Q7. 每月個人穿搭預算 <span class="text-sm font-normal text-stone-500">(填充題 - Number)</span>
+                        </h3>
+                        <p class="text-sm text-stone-600 mb-3">請問您平均每月用於個人穿搭、治裝或配件購買的預算約為多少元（新台幣 NT$）？</p>
+                        <input class="w3-input w3-border w3-round bg-white max-w-md" type="number" name="monthly_budget" min="0" max="100000" step="500" placeholder="例如：3000" required>
+                    </div>
+
+                    <!-- Q8. 填充題：限定日期 (date) -->
+                    <div class="w3-panel w3-leftbar w3-border-green bg-stone-50 p-4 rounded">
+                        <h3 class="text-lg font-bold text-[#3c4235] mb-1">
+                            Q8. 預計下次購買商品日期 <span class="text-sm font-normal text-stone-500">(填充題 - Date)</span>
+                        </h3>
+                        <p class="text-sm text-stone-600 mb-3">請問您預計下次進行線上選購或補貨的預估日期為何？</p>
+                        <input class="w3-input w3-border w3-round bg-white max-w-md" type="date" name="next_shopping_date">
+                    </div>
+
+                    <!-- Q9. 問答題：使用 textarea (rows >= 3) -->
+                    <div class="w3-panel w3-leftbar w3-border-green bg-stone-50 p-4 rounded">
+                        <h3 class="text-lg font-bold text-[#3c4235] mb-1">
+                            Q9. 寶貴建議與反饋 <span class="text-sm font-normal text-stone-500">(問答題 - Textarea, 高度 4 橫列)</span>
+                        </h3>
+                        <p class="text-sm text-stone-600 mb-3">請問您對「態著 TAI-ZE」網站的視覺風格、商品種類、體驗流暢度有任何建議嗎？</p>
+                        <textarea class="w3-input w3-border w3-round bg-white w-full" name="feedback_comments" rows="4" placeholder="歡迎留下您對態著 TAI-ZE 的任何看法或許願單..."></textarea>
+                    </div>
+
+                    <!-- 按鈕區塊：送出與重設 -->
+                    <div class="flex flex-wrap gap-4 pt-4 border-t border-stone-200">
+                        <button type="submit" class="w3-button w3-green w3-round-large w3-padding-large font-bold shadow hover:shadow-md transition">
+                            📤 送出問卷
+                        </button>
+                        <button type="reset" class="w3-button w3-red w3-round-large w3-padding-large font-bold shadow hover:shadow-md transition">
+                            🔄 清除重填
+                        </button>
+                    </div>
+
+                </fieldset>
+            </form>
